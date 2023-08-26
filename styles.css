@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+
+/* Header - Universal */
+
+.header {
+    min-height: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background: linear-gradient(#c8c8c8, #f1f0f0 50%, #eee 100%);
+}
+
+@media only screen and (max-width: 480px) {
+    .header {
+        min-height: 320px;
+    }
+}
+
+.header-head {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 2;
+    background-color: rgb(235, 239, 239);
+}
+
+.home-button-image-comtainer {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 705px) {
+    .home-button-image-comtainer {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .header-head {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.home-button-image-comtainer img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, .2);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.header-headline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+    padding: 10px;
+    width: 100%;
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+.header-headline h1 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+    font-size: 56px;
+}
+
+@media only screen and (max-width: 880px) {
+    .header-headline {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .header-headline {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .header-headline h1 {
+        font-size: 48px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .header-headline h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    .header-headline h1 {
+        font-size: 32px;
+    }
+}
+
+.header-headline p {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 610px) {
+    .header-headline p {
+        font-size: 18px;
+    }
+}
+
+.navbar-links-wrapper {
+    background: linear-gradient(#c8c8c8, #f1f0f0 50%, #eee 100%);
+    min-width: 50px;
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.navbar-links li {
+    margin: 10px 5px 10px 5px;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(234, 238, 239);
+    border: 1px solid rgb(215, 211, 211);
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, .5)
+}
+
+.navbar-links li:hover {
+    background-color: rgb(215, 211, 211);
+    transition: background-color 1s ease;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-links li a:hover {
+    color: red;
+    transition: color 1s ease;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 42px;
+    height: 42px;
+    padding-right: 5px;
+}
+
+.toggle-button .bar {
+    height: 5px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+@media (max-width: 480px) {
+    .toggle-button-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links-wrapper {
+        background-color: white;
+        border: 0px solid rgb(215, 211, 211);
+    }
+    .navbar-links {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 20px;
+        position: relative;
+        top: 10px;
+        padding: 26px 0;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+        /* position: relative; */
+        top: 30px;
+        padding-top: 10px;
+        background-color: white;
+    }
+    .navbar-links li {
+        text-align: left;
+        width: 100%;
+    }
+    .navbar-links li:hover {
+        width: 100%;
+        background-color: rgb(234, 238, 239);
+    }
+    .navbar-links li a {
+        color: black;
+    }
+    .navbar-links li a:hover {
+        color: red;
+    }
+    .navbar-links.active {
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+/* Main universal */
+
+.main {
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.links {
+    text-decoration: none;
+    color: red;
+    font-weight: 600;
+}
+
+.links:hover {
+    color: blue;
+}
+
+.top {
+    text-decoration: none;
+    color: blue;
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+
+/* INDEX - HEM */
+
+.home-image-container-small {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 481px) {
+    .home-image-container-small img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .home-image-container-big {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-image-container-big {
+        width: 100%;
+        height: 100%;
+    }
+    .home-image-container-big img {
+        width: 100%;
+        height: 100%;
+    }
+    .home-image-container-small img {
+        display: none;
+    }
+    .copyright-img-small {
+        display: none;
+    }
+}
+
+.copyright-img-small,
+.copyright-img-big {
+    width: 100%;
+}
+
+@media only screen and (max-width: 355px) {
+    .copyright-big p {
+        font-size: 16px;
+    }
+}
+
+.main-square-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-square {
+    width: 150px;
+    height: 150px;
+    border: 5px solid black;
+    margin: 5px;
+}
+
+.main-home h1,
+h2 {
+    text-align: center;
+}
+
+.main-home p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-home p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-home p {
+        font-size: 16px;
+    }
+}
+
+
+/* LIVSMILJÖER */
+
+.main-livsmiljöer h1,
+h2 {
+    text-align: center;
+}
+
+.main-livsmiljöer h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-livsmiljöer p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+.main-livsmiljöer a {
+    text-decoration: none;
+    color: blue;
+}
+
+@media (max-width: 700px) {
+    .main-livsmiljöer p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-livsmiljöer p {
+        font-size: 16px;
+    }
+}
+
+.main-livsmiljöer img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+/* TRÄDGÅRD */
+
+.main-trädgård h1,
+h2 {
+    text-align: center;
+}
+
+.main-trädgård h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-trädgård p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-trädgård p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-trädgård p {
+        font-size: 16px;
+    }
+}
+
+.main-trädgård img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.main-trädgård a {
+    text-decoration: none;
+    color: blue;
+}
+
+
+/* ARTBESTÄMNING */
+
+.main-artbestämning h1,
+h2 {
+    text-align: center;
+}
+
+.main-artbestämning h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-artbestämning p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-artbestämning p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-artbestämning p {
+        font-size: 16px;
+    }
+}
+
+.main-artbestämning img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+/* LARVER */
+
+.main-larver h1,
+h2 {
+    text-align: center;
+}
+
+.main-larver h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-larver p,
+ul li {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-larver p,
+    ul li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-larver p,
+    ul li {
+        font-size: 16px;
+    }
+}
+
+.main-larver ul {
+    margin-top: -3px;
+    padding-top: 0;
+}
+
+.main-larver ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.main-larver .colapse {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.main-larver img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+/* FOTOGRAFERA */
+
+.main-fotografera h1,
+h2 {
+    text-align: center;
+}
+
+.main-fotografera h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-fotografera h3 {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-left: 5px;
+}
+
+.main-fotografera p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-fotografera p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-fotografera p {
+        font-size: 16px;
+    }
+}
+
+.main-fotografera img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+/* SKÅDA */
+
+.main-skådarteknik h1,
+h2 {
+    text-align: center;
+}
+
+.main-skådarteknik h2 {
+    margin-top: 60px;
+    margin-bottom: 5px;
+}
+
+.main-skådarteknik p {
+    font-size: 24px;
+    margin: 0;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-skådarteknik p {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-skådarteknik p {
+        font-size: 16px;
+    }
+}
+
+
+/* .betesbilder {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.betesfälla {
+    margin-right: 10px;
+} */
+
+.main-skådarteknik img {
+    margin: 10px 15px 0 0;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
